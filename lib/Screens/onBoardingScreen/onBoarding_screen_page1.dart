@@ -6,7 +6,7 @@ class OnBoardingScreen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      color: Colors.white,
       child: const Center(
         child: Text(
           'Page 1',

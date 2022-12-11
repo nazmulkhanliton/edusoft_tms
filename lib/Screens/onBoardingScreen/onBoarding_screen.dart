@@ -1,3 +1,4 @@
+import 'package:edusoft_tms/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -57,11 +58,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   },
                   child: const Text(
                     'Skip',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
 
                 //Dot Indicator
-                SmoothPageIndicator(controller: _controller, count: 3),
+                SmoothPageIndicator(
+                  controller: _controller,
+                  count: 3,
+                  // effect: SlideEffect(
+                  //   dotColor: kPrimaryLightColor,
+                  //   activeDotColor: Colors.indigo,
+                  // ),
+                ),
 
                 //next or Done
                 onlastPage
@@ -74,6 +85,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         },
                         child: const Text(
                           'Done',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
                         ),
                       )
                     : GestureDetector(
