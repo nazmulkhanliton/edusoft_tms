@@ -2,6 +2,7 @@ import 'package:edusoft_tms/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../Login/login_screen.dart';
 import 'onBoarding_screen_page1.dart';
 import 'onBoarding_screen_page2.dart';
 import 'onBoarding_screen_page3.dart';
@@ -51,10 +52,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 //Skip
                 GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const LoginPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()));
                   },
                   child: const Text(
                     'Skip',
@@ -78,10 +79,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 onlastPage
                     ? GestureDetector(
                         onTap: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (context) => const LoginPage()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginPage()));
                         },
                         child: const Text(
                           'Done',
