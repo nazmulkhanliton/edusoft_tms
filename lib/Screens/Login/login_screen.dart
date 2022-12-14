@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Signup/signup_screen.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -127,26 +129,17 @@ class _LoginPageState extends State<LoginPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   TextButton(
-                      onPressed: () => showDialog<String>(
-                        context: context,
-                        builder: (BuildContext context) => AlertDialog(
-                          title: const Text('Not Implemented', style: TextStyle(fontSize: 14),),
-                          content: const Text('Thank You', style: TextStyle(fontSize: 26),),
-                          actions: <Widget>[
-                            // TextButton(
-                            //   onPressed: () => Navigator.pop(context, 'Cancel'),
-                            //   child: const Text('Cancel'),
-                            // ),
-                            TextButton(
-                              onPressed: () => Navigator.pop(context, 'OK'),
-                              child: const Text('OK'),
-                            ),
-                          ],
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignupPage()
                         ),
-                      ),
-                      child: const Text('Register now'))
+                      );
+                    },
+                    child: const Text('Register Now'),
+                  ),
                 ],
               ),
             ],
