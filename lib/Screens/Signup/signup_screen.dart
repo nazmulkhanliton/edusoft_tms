@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
 import '../Login/login_screen.dart';
+
 class SignupPage extends StatefulWidget {
   const SignupPage({Key? key}) : super(key: key);
 
@@ -16,6 +18,7 @@ class _SignupPageState extends State<SignupPage> {
         body: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               _header(context),
               _inputFields(context),
@@ -25,21 +28,20 @@ class _SignupPageState extends State<SignupPage> {
       ),
     );
   }
-  _header(context){
+
+  _header(context) {
     return Column(
       children: const [
         Text(
           'Create Account',
           style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
         ),
-        Text(
-            'Enter your details to get started'
-        ),
+        Text('Enter your details to get started'),
       ],
     );
   }
 
-  _inputFields(context){
+  _inputFields(context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -56,9 +58,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
         ),
-
         const SizedBox(height: 10),
-
         TextField(
           decoration: InputDecoration(
             hintText: 'Email id',
@@ -71,9 +71,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
         ),
-
         const SizedBox(height: 10),
-
         TextField(
           decoration: InputDecoration(
             hintText: 'Password',
@@ -86,9 +84,7 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
         ),
-
         const SizedBox(height: 10),
-
         TextField(
           decoration: InputDecoration(
             hintText: 'Confirm Password',
@@ -101,34 +97,34 @@ class _SignupPageState extends State<SignupPage> {
             ),
           ),
         ),
-
         const SizedBox(
           height: 10,
         ),
-
         ElevatedButton(
           //style: ElevatedButton.styleFrom(fixedSize: const Size(300, 55)),
           style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(kPrimaryColor),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0),
-                      //side: BorderSide(color: Colors.white)
-                  )
-              )
-          ),
-          onPressed: (){
+                borderRadius: BorderRadius.circular(12.0),
+                //side: BorderSide(color: Colors.white)
+              ))),
+          onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const LoginPage()),
             );
           },
-          child: const Text('Sign Up', style: TextStyle(fontSize: 24),),
+          child: const Text(
+            'Sign Up',
+            style: TextStyle(
+              fontSize: 24,
+            ),
+          ),
         ),
-
         const SizedBox(
           height: 10,
         ),
-
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -139,15 +135,18 @@ class _SignupPageState extends State<SignupPage> {
               ),
             ),
             TextButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const LoginPage()
-                  ),
+                  MaterialPageRoute(builder: (context) => const LoginPage()),
                 );
               },
-              child: const Text('Sign In'),
+              child: const Text(
+                'Sign In',
+                style: TextStyle(
+                  color: kPrimaryColor,
+                ),
+              ),
             ),
           ],
         ),

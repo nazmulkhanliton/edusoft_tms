@@ -103,7 +103,8 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(fixedSize: const Size(700, 55)),
+
+                    style: ElevatedButton.styleFrom(fixedSize: const Size(700, 55),),
                     onPressed: (){
                       //AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
                     },
