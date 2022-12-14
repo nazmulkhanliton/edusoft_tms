@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-
 class OnBoardingScreen3 extends StatelessWidget {
   const OnBoardingScreen3({Key? key}) : super(key: key);
 
@@ -13,7 +11,7 @@ class OnBoardingScreen3 extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 'Welcome To',
                 style: TextStyle(

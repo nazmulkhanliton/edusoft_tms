@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-
 class OnBoardingScreen1 extends StatelessWidget {
   const OnBoardingScreen1({Key? key}) : super(key: key);
 
@@ -12,10 +10,10 @@ class OnBoardingScreen1 extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(26),
+            padding: const EdgeInsets.all(26),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Text(
                   'Our Mission',
                   style: TextStyle(

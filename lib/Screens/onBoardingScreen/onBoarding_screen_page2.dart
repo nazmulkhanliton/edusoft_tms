@@ -12,10 +12,10 @@ class OnBoardingScreen2 extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(26),
+            padding: const EdgeInsets.all(26),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 Text(
                   'Our Vision',
                   style: TextStyle(
