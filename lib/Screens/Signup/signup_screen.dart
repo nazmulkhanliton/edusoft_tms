@@ -13,11 +13,14 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            _header(context),
-            _inputFields(context),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              _header(context),
+              _inputFields(context),
+            ],
+          ),
         ),
       ),
     );
@@ -104,14 +107,49 @@ class _SignupPageState extends State<SignupPage> {
         ),
 
         ElevatedButton(
-          style: ElevatedButton.styleFrom(fixedSize: const Size(300, 55)),
+          //style: ElevatedButton.styleFrom(fixedSize: const Size(300, 55)),
+          style: ButtonStyle(
+              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12.0),
+                      //side: BorderSide(color: Colors.white)
+                  )
+              )
+          ),
           onPressed: (){
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => const LoginPage()),
             );
           },
-          child: const Text('Sign Up', style: TextStyle(fontSize: 24)),
+          child: const Text('Sign Up', style: TextStyle(fontSize: 24),),
+        ),
+
+        const SizedBox(
+          height: 10,
+        ),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Have an Account?',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            TextButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const LoginPage()
+                  ),
+                );
+              },
+              child: const Text('Sign In'),
+            ),
+          ],
         ),
       ],
     );
