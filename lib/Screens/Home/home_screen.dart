@@ -11,12 +11,20 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Text(
-            'Hello',
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'Home Page'
           ),
+        ),
+        body: Column(
+          children: const [
+            Text(
+              'from Body Text',
+            ),
+          ],
         ),
       ),
     );
