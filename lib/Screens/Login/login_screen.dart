@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Home/home_screen.dart';
 import '../Signup/signup_screen.dart';
 
 class LoginPage extends StatefulWidget {
@@ -107,6 +108,12 @@ class _LoginPageState extends State<LoginPage> {
                     style: ElevatedButton.styleFrom(fixedSize: const Size(700, 55),),
                     onPressed: (){
                       //AuthController.instance.login(emailController.text.trim(), passwordController.text.trim());
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()
+                        ),
+                      );
                     },
                     child: const Text(
                       'Log In',
