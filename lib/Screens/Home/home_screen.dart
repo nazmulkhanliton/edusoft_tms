@@ -1,4 +1,5 @@
 //When the user login this page show 1st
+import 'package:edusoft_tms/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,11 +16,13 @@ class _HomeScreenState extends State<HomeScreen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: kPrimaryColor,
           title: const Text(
             'Home Page'
           ),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
             Text(
               'from Body Text',
