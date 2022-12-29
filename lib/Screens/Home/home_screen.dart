@@ -21,14 +21,22 @@ class _HomeScreenState extends State<HomeScreen> {
             'Home Page'
           ),
         ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            Text(
-              'from Body Text',
-            ),
-          ],
-        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+                'Hello',
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Home Page'
+              ),
+            ],
+          ),
+        )
       ),
     );
   }
