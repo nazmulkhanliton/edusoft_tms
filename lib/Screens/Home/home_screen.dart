@@ -34,6 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
               Text(
                 'Home Page'
               ),
+
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                  'Put Your Home page Code'
+              ),
             ],
           ),
         )
