@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 10,
               ),
               Text(
-                  'Home Code here'
+                  'Home Code here  '
               ),
             ],
           ),
