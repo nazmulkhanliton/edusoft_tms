@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 10,
               ),
               Text(
-                  'Put Your Home page Code here  '
+                  'Put Your Home page Code'
               ),
             ],
           ),
