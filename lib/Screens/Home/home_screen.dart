@@ -12,38 +12,35 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: kPrimaryColor,
-          title: const Text(
-            'Home Page'
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kPrimaryColor,
+        title: const Text(
+          'Home page',
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text(
-                'Hello',
+      ),
+      body: ListView.builder(
+        itemCount: 15,
+        itemBuilder: (BuildContext context, int index){
+          return Padding(
+              padding:  const EdgeInsets.all(8.0),
+            child: Container(
+              height: 130,
+              decoration: BoxDecoration(
+                color: kPrimaryLightColor,
+                    borderRadius: BorderRadius.circular(25),
               ),
-              SizedBox(
-                width: 10,
+              child: Center(
+                child: Text(
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
+                  "Container $index"
+                ),
               ),
-              Text(
-                'Home Page'
-              ),
-
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                  'Put Your Home page code here'
-              ),
-            ],
-          ),
-        )
+            ),
+          );
+        }
       ),
     );
   }
