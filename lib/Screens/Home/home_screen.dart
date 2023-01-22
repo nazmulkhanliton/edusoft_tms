@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kPrimaryColor.withOpacity(.65),
         title: const Text(
           'Home page',
         ),
@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: 15,
         itemBuilder: (BuildContext context, int index){
           return Padding(
-              padding:  const EdgeInsets.all(8.0),
+              padding:  const EdgeInsets.all(4.0),
             child: Container(
               height: 130,
               decoration: BoxDecoration(
@@ -31,11 +31,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(25),
               ),
               child: Center(
-                child: Text(
-                  style: const TextStyle(
-                    fontSize: 20,
-                  ),
-                  "Container $index"
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                      "Container $index",
+                    ),
+                    const SizedBox(
+                     height: 20,
+                    ),
+                    const Text(
+                      'Hello',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
